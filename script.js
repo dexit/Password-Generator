@@ -26,6 +26,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+  copyPassword();
+  
 
 }
 
@@ -34,7 +36,7 @@ function generatePassword() {
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numeric = "0123456789";
-  var special = "!@#$%^&*()_+";
+  var special = "!@#$%^&*()_-/£~<>?/,+";
  
   var temppw = [];
   var passwordLength = prompt("How many characters would you like your password to be? (please enter a number between 8 and 128)");
@@ -76,6 +78,7 @@ function generatePassword() {
   console.log('The string used for password generation: \n' + temppw);
   console.log('Generated password: \n' + password.join(""));
   //return temppw;
+ // generateBtn.append('<button id="copypw" onClick="copyPassword()" class="btn btn-info">Copy To Clipboard</button>');
   return password.join("");
 
   } else {
@@ -90,7 +93,13 @@ function generatePassword() {
   }
 
 }
-
+function copyPassword() {
+  var copyText = document.querySelector("#password");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  console.log('Password "'+ copyText.value  +'"copied to clipboard');
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
