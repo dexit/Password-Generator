@@ -44,35 +44,49 @@ function generatePassword() {
     var lowerCaseCheck = confirm("Would you like your password to include lowercase characters?");
     if(lowerCaseCheck === true) {
        temppw =  lowerCase;
+    }else{
+      // continue with the rest of the password generation
     }
     
     var upperCaseCheck = confirm("Would you like your password to include uppercase characters?");
     if(upperCaseCheck === true) {
        temppw = temppw + upperCase;
+    }else{
+      // continue with the rest of the password generation
     }
     
     var numericCheck = confirm("Would you like your password to include numeric characters?");
     if(numericCheck === true) {
        temppw = temppw + numeric
+    }else{
+      // continue with the rest of the password generation
     }
     
     var specialCheck = confirm("Would you like your password to include special characters?");
     if(specialCheck === true) {
       temppw = temppw + special;
+    }else{
+      // continue with the rest of the password generation
     }
     
   for(var i = 0; i < passwordLength; i++) {
     var randomNumber = Math.floor(Math.random() * temppw.length);
     password.push(temppw[randomNumber]);
   }
-  console.log(temppw);
-  console.log(password);
+  console.log('The string used for password generation: \n' + temppw);
+  console.log('Generated password: \n' + password.join(""));
   //return temppw;
   return password.join("");
 
   } else {
     alert("Please enter a number between 8 and 128");
-    return 0;
+    var restarted  = confirm("Would you like to try again?");
+    if(restarted === true) {
+      return generatePassword();
+    }else{
+      return 'You have chosen to exit the program, click Generate to restart the program';
+    }
+   // return 0;
   }
   //var passwordCriteria = confirm("Should we include lowercase characters?");
  // var passwordCriteria2 = confirm("Should we include uppercase characters?");
