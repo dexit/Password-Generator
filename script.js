@@ -88,13 +88,6 @@ function generatePassword() {
     }
    // return 0;
   }
-  //var passwordCriteria = confirm("Should we include lowercase characters?");
- // var passwordCriteria2 = confirm("Should we include uppercase characters?");
- // var passwordCriteria3 = confirm("Should we include numeric characters?");
-  //var passwordCriteria4 = confirm("Should we include special characters?");
-  
-  
-
 
 }
 
