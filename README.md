@@ -1,5 +1,17 @@
 # Password-Generator
 Module 3 Assignment for Birmingham University Code Bootcamp
+### This password generator includes the following
+* Asks for password length
+* Asks complexity questions
+* Based on the answer creates the character array for password generation.
+* Uses the array to generate the needed complexity and lengths password.
+* Looks out for the user providing less 8 than or over 128 character lengths
+* Gives the user another chance to restart
+* Else just shows a message.
+
+!! Just extra !!
+Also adds the output in console.log, so it is easier to follow.
+Also copies the password to the clipboard.
 
 ## Preview and usage example gif
 
@@ -9,15 +21,6 @@ As required we need to show how the solution looks/is used.
 ![This is the Screenshot ](./Screenshot1.jpg)
 ###  Usage example 
 ![This is the Usage Example](./usage-example.gif)
-
-## This password generator includes the following
-Asks complexity questions, and based on the answer creates the character array for password generation.
-Then uses the array to generate the needed lengths password.
-Looks out for the user providing less 8 than or over 128 character lengths, and gives the user another chance to restart, else just shows a message.
-
-!! Just extra !!
-Also adds the output in console.log, so it is easier to follow.
-Also copies the password to the clipboard.
 
 ### This Password generator follows the outlined use case
 GIVEN I need a new, secure password
