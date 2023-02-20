@@ -14,7 +14,7 @@ Also adds the output in console.log, so it is easier to follow.
 Also copies the password to the clipboard.
 
 ## Preview and usage example gif
-
+Live link : https://dexit.github.io/Password-Generator/
 As required we need to show how the solution looks/is used.
 
 ### Screenshot 
