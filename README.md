@@ -1,10 +1,13 @@
 # Password-Generator
 Module 3 Assignment for Birmingham University Code Bootcamp
 
-## Screenshot and Gif of Password Generator assignment look and usage
+## Preview and usage example gif
 
+As required we need to show how the solution looks/is used.
+
+### Screenshot 
 ![This is the Screenshot ](./Screenshot1.jpg)
-
+###  Usage example 
 ![This is the Usage Example](./usage-example.gif)
 
 ## This password generator includes the following
