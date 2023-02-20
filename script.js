@@ -35,23 +35,41 @@ function generatePassword() {
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numeric = "0123456789";
   var special = "!@#$%^&*()_+";
+ 
+  var temppw = [];
   var passwordLength = prompt("How many characters would you like your password to be? (please enter a number between 8 and 128)");
-  if (passwordLength >= 8 && passwordLength <= 128) {
-    var lowerCaseCheck = confirm("Would you like your password to include lowercase characters?");
-    var upperCaseCheck = confirm("Would you like your password to include uppercase characters?");
-    var numericCheck = confirm("Would you like your password to include numeric characters?");
-    var specialCheck = confirm("Would you like your password to include special characters?");
-    if (lowerCaseCheck === true && upperCaseCheck === true && numericCheck === true && specialCheck === true) {
-      for (var i = 0; i < passwordLength; i++) {
-        var randomLowerCase = lowerCase[Math.floor(Math.random() * lowerCase.length)];
-        var randomUpperCase = upperCase[Math.floor(Math.random() * upperCase.length)];
-        var randomNumeric = numeric[Math.floor(Math.random() * numeric.length)];
-        var randomSpecial = special[Math.floor(Math.random() * special.length)];
-        password.push(randomLowerCase, randomUpperCase, randomNumeric, randomSpecial);
 
-      }
-      return password.join("");
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    
+    var lowerCaseCheck = confirm("Would you like your password to include lowercase characters?");
+    if(lowerCaseCheck === true) {
+       temppw =  lowerCase;
     }
+    
+    var upperCaseCheck = confirm("Would you like your password to include uppercase characters?");
+    if(upperCaseCheck === true) {
+       temppw = temppw + upperCase;
+    }
+    
+    var numericCheck = confirm("Would you like your password to include numeric characters?");
+    if(numericCheck === true) {
+       temppw = temppw + numeric
+    }
+    
+    var specialCheck = confirm("Would you like your password to include special characters?");
+    if(specialCheck === true) {
+      temppw = temppw + special;
+    }
+    
+  for(var i = 0; i < passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * temppw.length);
+    password.push(temppw[randomNumber]);
+  }
+  console.log(temppw);
+  console.log(password);
+  //return temppw;
+  return password.join("");
+
   } else {
     alert("Please enter a number between 8 and 128");
     return 0;
@@ -65,6 +83,7 @@ function generatePassword() {
 
 
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
