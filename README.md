@@ -15,7 +15,8 @@ Also copies the password to the clipboard.
 
 ## Preview and usage example gif
 Live link : https://dexit.github.io/Password-Generator/
-As required we need to show how the solution looks/is used.
+
+`As required we need to show how the solution looks/is used.`
 
 ### Screenshot 
 ![This is the Screenshot ](./Screenshot1.jpg)
